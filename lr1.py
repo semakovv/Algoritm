@@ -16,22 +16,20 @@
 # s = input("Введите строку: ")
 # s = "*".join(s)
 # print(s)
-# 4 # кол-во актетов
-flag = True
-ip = input("Введите IP-адрес: ")
-ip = ip.split(".")
-print(ip)
-for i in ip:
-    if i.isdigit() and 0 <= i <= 255:
-        flag = True
-    else:
-        flag = False
-        break
-if flag == True:
-    print("YES")
-else:
-    print("NO")
-
+# 4 #
+# flag = True
+# ip = input("Введите IP-адрес: ")
+# ip = ip.split(".")
+# for i in ip:
+#     if i.isdigit() and 0 <= i <= 255:
+#         flag = True
+#     else:
+#         flag = False
+#         break
+# if flag == True:
+#     print("YES")
+# else:
+#     print("NO")
 # 5 #
 # import re
 # s = input("Введите строку: ")
