@@ -22,3 +22,19 @@
 #         return sm3
 # print(func_while(lst, sm, n))
 # 2
+import random
+# lst = [random.choise(-9, 9) for i in random.range(0,10)]
+lst = [3, 2, 1, 0]
+def sort(LST):
+    swap = False
+    n = 0
+    for i in LST:
+        if i > i[n+1]:
+            i, i[n+1] = i[n+1], i
+            n += 1
+            swap = True
+    if swap:
+        return sort(LST[0:len(LST-1)])
+    else:
+        return LST
+print(sort(lst))
