@@ -22,19 +22,34 @@
 #         return sm3
 # print(func_while(lst, sm, n))
 # 2
-import random
-# lst = [random.choise(-9, 9) for i in random.range(0,10)]
-lst = [3, 2, 1, 0]
-def sort(LST):
-    swap = False
-    n = 0
-    for i in LST:
-        if i > i[n+1]:
-            i, i[n+1] = i[n+1], i
-            n += 1
-            swap = True
-    if swap:
-        return sort(LST[0:len(LST-1)])
-    else:
-        return LST
-print(sort(lst))
+# import random
+# lst = [random.randint(-9, 9) for i in range(random.randrange(10))]
+# print(lst)
+# # lst = [3, 2, 1, 0]
+# def sort(LST):
+#     swap = False
+#     ln_lst = len(LST) - 1
+#     for i in range(ln_lst):
+#         if LST[i] > LST[i + 1]:
+#             LST[i], LST[i + 1] = LST[i + 1], LST[i]
+#             swap = True
+#     if swap:
+#         return sort(LST)
+#     else:
+#         return LST
+# print(sort(lst))
+# 3
+# import random
+# lst = [random.randint(-9, 9) for i in range(random.randrange(10))]
+# print(lst)
+# # lst = [3, 3, 3, 1, 1, 0]
+# def count_twice(LST):
+#     # cnt = {i: LST.count(i) for i in LST} кол-во элементов
+#     cnt = 0
+#     ln_lst = len(LST)
+#     for i in range(ln_lst - 1, -1, -1):
+#         for j in range(i - 1, -1, -1):
+#             if LST[i] == LST[j]:
+#                 cnt += 1
+#     return cnt
+# print(count_twice(lst))
