@@ -53,3 +53,15 @@
 #                 cnt += 1
 #     return cnt
 # print(count_twice(lst))
+# 4
+import random
+num = random.randint(-999, 999)
+print(num)
+def int_num(NUM):
+    A = set()
+    # return {int(i) for i in str(NUM)} # через перебор символов
+    ln_int_num = len(str(NUM))
+    for i in range(ln_int_num - 1):
+        A.add((NUM // 10 ** ln_int_num - 1) % 10 ** i)
+        return A
+print(int_num(num))
