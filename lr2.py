@@ -54,14 +54,33 @@
 #     return cnt
 # print(count_twice(lst))
 # 4
-import random
-num = random.randint(-999, 999)
-print(num)
-def int_num(NUM):
-    A = set()
-    # return {int(i) for i in str(NUM)} # через перебор символов
-    ln_int_num = len(str(NUM))
-    for i in range(ln_int_num - 1):
-        A.add((NUM // 10 ** ln_int_num - 1) % 10 ** i)
-        return A
-print(int_num(num))
+# import random
+# num = random.randint(0, 999)
+# print(num)
+# def int_num(NUM):
+#     # A = {int(i) for i in str(NUM)} # через перебор символов
+#     # ln_A = len(A)
+#     A = set() # через перебор цифр
+#     ln_int_num = len(str(NUM))
+#     for i in range(ln_int_num - 1, -1, -1):
+#         A.add((NUM // 10 ** i) % 10)
+#     ln_A = len(A)
+#     return A, ln_A
+# print(int_num(num))
+# 5
+# s = "1 2 3 4 5 5"
+# A = set(s)
+# print(A)
+# for i in A:
+#     cnt = 0
+#     for j in s:
+#         if (i is j) and (i is not" "):
+#             cnt += 1
+#     if cnt >= 2:
+#         print(i, cnt, "YES")
+#     else:
+#         print(i, cnt, "NO")
+# 6
+# s = "a a a b b b c c c 1 2 3"
+# cnt = {i: s.count(i) for i in s}
+# print(cnt)
