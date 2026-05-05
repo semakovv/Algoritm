@@ -41,6 +41,31 @@
 #     else:
 #         return LST
 # print(sort(lst))
+import random as ra
+lst = [ra.randint(-9, 9) for i in range(20)]
+print(lst)
+l = 0
+r = len(lst)
+def sort(LST):
+    i = 0
+    j = len(LST) - 1
+    q = 0
+    while i <= j:
+        while i < len(LST) and LST[i] < q:
+            i += 1
+        while j > 0 and LST[j] > q:
+            j -= 1
+        if i <= j:
+            LST[i], LST[j] = LST[j], LST[i]
+            i += 1
+            j -= 1
+sort(lst)
+print(lst)
+
+
+
+    
+
 # 3
 # import random #число сочитаний из НПК или кол-во рёбер в полном графе
 # lst = [random.randint(5, 9) for i in range(random.randrange(10))]
@@ -84,6 +109,6 @@
 #     else:
 #         print(i, cnt, "NO")
 # 6
-s = "a a a b b b c c c 1 2 3"
-cnt = {i: s.count(i) for i in s}
-print(cnt)
+# s = "a a a b b b c c c 1 2 3"
+# cnt = {i: s.count(i) for i in s}
+# print(cnt)
