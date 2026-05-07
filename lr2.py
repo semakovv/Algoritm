@@ -24,48 +24,27 @@
 #     else:
 #         return sm3
 # print(func_while(lst))
-# 2
-# import random
-# lst = [random.randint(-9, 9) for i in range(random.randrange(10))]
+# 2 оценка сложности алгоритма и быстрая сотрировка O(logn)
+# import random as ra
+# lst = [ra.randint(-9, 9) for i in range(20)]
 # print(lst)
-# # lst = [3, 2, 1, 0] # сложность алгоритма и быстрая сортировка
+# l = 0
+# r = len(lst)
 # def sort(LST):
-#     swap = False
-#     ln_lst = len(LST) - 1
-#     for i in range(ln_lst):
-#         if LST[i] > LST[i + 1]:
-#             LST[i], LST[i + 1] = LST[i + 1], LST[i]
-#             swap = True
-#     if swap:
-#         return sort(LST)
-#     else:
-#         return LST
-# print(sort(lst))
-import random as ra
-lst = [ra.randint(-9, 9) for i in range(20)]
-print(lst)
-l = 0
-r = len(lst)
-def sort(LST):
-    i = 0
-    j = len(LST) - 1
-    q = 0
-    while i <= j:
-        while i < len(LST) and LST[i] < q:
-            i += 1
-        while j > 0 and LST[j] > q:
-            j -= 1
-        if i <= j:
-            LST[i], LST[j] = LST[j], LST[i]
-            i += 1
-            j -= 1
-sort(lst)
-print(lst)
-
-
-
-    
-
+#     i = 0
+#     j = len(LST) - 1
+#     q = 0
+#     while i <= j:
+#         while i < len(LST) and LST[i] < q:
+#             i += 1
+#         while j > 0 and LST[j] > q:
+#             j -= 1
+#         if i <= j:
+#             LST[i], LST[j] = LST[j], LST[i]
+#             i += 1
+#             j -= 1
+# sort(lst)
+# print(lst)
 # 3
 # import random #число сочитаний из НПК или кол-во рёбер в полном графе
 # lst = [random.randint(5, 9) for i in range(random.randrange(10))]
@@ -81,33 +60,27 @@ print(lst)
 #                 cnt += 1
 #     return cnt
 # print(count_twice(lst))
-# 4
-# import random # str to set
-# num = random.randint(0, 999)
-# print(num)
-# def int_num(NUM):
-#     # A = {int(i) for i in str(NUM)} # через перебор символов
-#     # ln_A = len(A)
-#     A = set() # через перебор цифр
-#     ln_int_num = len(str(NUM))
-#     for i in range(ln_int_num - 1, -1, -1):
-#         A.add((NUM // 10 ** i) % 10)
-#     ln_A = len(A)
-#     return A, ln_A
-# print(int_num(num))
-# 5
-# s = "1 2 3 4 5 5" #
-# A = set(s)
-# print(A)
-# for i in A:
-#     cnt = 0
-#     for j in s:
-#         if (i is j) and (i is not" "):
-#             cnt += 1
-#     if cnt >= 2:
-#         print(i, cnt, "YES")
+# 4 str to set
+import random
+num = random.randint(0, 99999)
+print(num)
+def int_num(NUM):
+    NUM = str(NUM)
+    A = set(NUM)
+    for i in A:
+        print(i, NUM.count(i))
+int_num(num)
+# 5 
+# s = "1 2 3 22 22 4 5 5"
+# s = s.split()
+# print(s)
+# A = set()
+# for i in s:
+#     if i in A:
+#         print(i, "YES")
 #     else:
-#         print(i, cnt, "NO")
+#         A.add(i)
+#         print(i, "NO")
 # 6
 # s = "a a a b b b c c c 1 2 3"
 # cnt = {i: s.count(i) for i in s}
